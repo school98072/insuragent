@@ -18,8 +18,11 @@ def create_start_app_handler(app: FastAPI):
             import os
             sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
             from scripts.seed_demo_users import seed_users
+            from scripts.seed_realistic_claims import seed_realistic_claims
             logger.info("Running database auto-seeding...")
             seed_users()
+            logger.info("Running realistic claims auto-seeding...")
+            seed_realistic_claims()
         except Exception as e:
             logger.error(f"Database auto-seeding failed: {e}", exc_info=True)
     return startup
