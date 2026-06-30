@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Spin } from 'antd'
 import { useAppSelector } from '@/store/hooks'
 import AppLayout from '@/components/layout/Layout'
@@ -47,7 +47,7 @@ const ForbiddenPage = () => (
 
 export default function AppRouter() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
@@ -71,6 +71,6 @@ export default function AppRouter() {
           </Route>
         </Routes>
       </Suspense>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
