@@ -8,7 +8,7 @@
 
 ---
 
-# 🇬🇧 English Version
+# English Version
 
 ## 🎨 Tech Stack
 - **Framework**: React 18 + TypeScript 4.9
@@ -102,7 +102,7 @@ npm run test:coverage
 
 ---
 
-# 🇨🇳 中文版
+# 中文版
 
 ## 🎨 技術棧
 - **框架**: React 18 + TypeScript 4.9
