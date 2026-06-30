@@ -1,0 +1,42 @@
+{
+  "auth": {
+    "title": "跨境智能理赔网关",
+    "subtitle": "AI 原生欺诈拦截与自动理算",
+    "roleAdmin": "系统管理员",
+    "roleAdjuster": "高级理算员",
+    "roleCustomer": "跨境追偿专员",
+    "emailPlaceholder": "邮箱地址",
+    "passwordPlaceholder": "密码",
+    "loginButton": "登 录",
+    "loggingIn": "登录中...",
+    "feature1Title": "跨境代位求偿",
+    "feature1Desc": "无缝解析跨国发票，多司法管辖区穿透对齐。",
+    "feature2Title": "黑天鹅拦截",
+    "feature2Desc": "基于 GraphRAG 多跳查询，实时熔断欺诈支付。"
+  },
+  "claims": {
+    "listTitle": "理赔案件概览",
+    "detailTitle": "理赔详情",
+    "propertyCasualty": "产险",
+    "lifeInsurance": "人寿保险",
+    "coverage": "保障范围",
+    "maxLimit": "最高给付限额",
+    "excess": "免赔额",
+    "exclusions": "除外责任",
+    "aiAnalysis": "AI 辅助核保推理",
+    "fraudLevel": "欺诈风险等级",
+    "structuralData": "结构化理赔数据"
+  },
+  "audit": {
+    "title": "风控人工审计池",
+    "approveAdjust": "核准并调算 (Approve)",
+    "overrideTitle": "人工介入：理算金额重铸",
+    "overrideDesc": "系统已熔断该笔赔付（触发最高给付限额或欺诈告警）。请作为人类理算员，裁决最终可给付金额。",
+    "inputPlaceholder": "输入调整后的数值...",
+    "confirmButton": "确认发送 Payload",
+    "cancelButton": "取消"
+  },
+  "common": {
+    "language": "简"
+  }
+}

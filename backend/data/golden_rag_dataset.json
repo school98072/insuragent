@@ -1,0 +1,252 @@
+[
+  {
+    "query": "My roof has been leaking for ages, and now there's mold. Is that covered?",
+    "standard_answer": "No, loss or damage caused by gradual deterioration, mold, or slow leakage/seepage of water over a period exceeding 14 days is not covered.",
+    "cited_section": "Homeowners Policy Exclusions - Section B.4 a), b)"
+  },
+  {
+    "query": "My old pipe just burst suddenly and flooded the bathroom. Am I covered for the water damage?",
+    "standard_answer": "Yes, accidental burst of pipes is covered.",
+    "cited_section": "Homeowners Policy Exclusions - Section B.4 c)"
+  },
+  {
+    "query": "I noticed a small leak under my sink a month ago but didn't fix it, and now the cabinet is ruined. Will my policy cover this?",
+    "standard_answer": "No, damage arising from maintenance neglect or slow leakage or seepage of water over a period exceeding 14 days is not covered.",
+    "cited_section": "Homeowners Policy Exclusions - Section B.4 b)"
+  },
+  {
+    "query": "I was getting out of my car and twisted my ankle. Had to go to the hospital. Can I claim for the medical bills?",
+    "standard_answer": "Yes, the Company will pay reasonable medical expenses incurred in connection with accidental bodily injury sustained by the Insured or any authorized driver while getting into, riding in, or getting out of the Car.",
+    "cited_section": "Motor Insurance Policy - Section III.1"
+  },
+  {
+    "query": "My medical bills from the car accident came up to $8,000 HKD. How much can I get back, and what do you need?",
+    "standard_answer": "The maximum limit of indemnity for any single event under this Section is $6,000 HKD. Medical claims must be accompanied by original official medical receipts, physician's diagnosis, and police collision reports.",
+    "cited_section": "Motor Insurance Policy - Section III.2, III.3"
+  },
+  {
+    "query": "My flight to London was delayed by 7 hours because of a huge snowstorm. Can I claim for that? I paid with my credit card.",
+    "standard_answer": "Yes, if the departure is delayed at the direction of the carrier for at least 6 consecutive hours due to inclement weather, and the travel tickets were purchased using the eligible Credit Card prior to departure.",
+    "cited_section": "Credit Card Comprehensive Travel Insurance - Section D.2.1, D.2.3"
+  },
+  {
+    "query": "My flight was delayed for 15 hours due to a mechanical issue. How much compensation can I expect?",
+    "standard_answer": "The Company will pay $1,000 HKD for the first 6 hours of delay, and $500 HKD for each subsequent 6 hours, up to a maximum limit of $5,000 HKD. For a 15-hour delay, this would be $1,000 HKD (first 6 hours) + $500 HKD (next 6 hours) = $1,500 HKD.",
+    "cited_section": "Credit Card Comprehensive Travel Insurance - Section D.2.2"
+  },
+  {
+    "query": "My flight was cancelled due to a strike, but the airline put me on another flight just 3 hours later. Can I still claim for the delay?",
+    "standard_answer": "No, delays due to carrier cancellation where alternative transportation is offered within 4 hours are excluded.",
+    "cited_section": "Credit Card Comprehensive Travel Insurance - Section D.2.4"
+  },
+  {
+    "query": "I missed my flight because I got stuck in traffic and arrived late for check-in. Can I claim for the delay benefit?",
+    "standard_answer": "No, delays due to the Insured Person's failure to check in on time are excluded.",
+    "cited_section": "Credit Card Comprehensive Travel Insurance - Section D.2.4"
+  },
+  {
+    "query": "We just discovered a hidden structural flaw in our foundation that's been there since the house was built, causing cracks. Is this covered?",
+    "standard_answer": "No, loss or damage caused by latent defects is not covered.",
+    "cited_section": "Homeowners Policy Exclusions - Section B.4 a)"
+  },
+  {
+    "query": "My roof has been slowly leaking for months, and now there's mold in the attic. Is this covered by my homeowners policy?",
+    "standard_answer": "No, loss or damage caused by gradual deterioration, mold, or slow leakage or seepage of water over a period exceeding 14 days is not covered.",
+    "cited_section": "Section B.4 a), b)"
+  },
+  {
+    "query": "My old water heater burst and flooded the basement. Is that covered, or is it considered a maintenance issue I should have prevented?",
+    "standard_answer": "Accidental burst of pipes is covered. However, damages resulting from failure to maintain plumbing fixtures are excluded.",
+    "cited_section": "Section B.4 c)"
+  },
+  {
+    "query": "I was in a minor fender bender and had to go to the ER. My medical bills are about $8,000 HKD. How much will my motor insurance pay?",
+    "standard_answer": "The maximum limit of indemnity for any single event under this Section for reasonable medical expenses is $6,000 HKD.",
+    "cited_section": "Section III.2"
+  },
+  {
+    "query": "My friend was driving my car and got into an accident. He broke his arm. Can he claim his medical expenses through my motor policy?",
+    "standard_answer": "Yes, the Company will pay the reasonable medical expenses incurred in connection with accidental bodily injury sustained by any authorized driver while getting into, riding in, or getting out of the Car.",
+    "cited_section": "Section III.1"
+  },
+  {
+    "query": "I had a small car accident, just a bump, and went to the doctor. I have the bill, but the police didn't come. Can I still claim medical expenses?",
+    "standard_answer": "No, medical claims must be accompanied by original official medical receipts, physician's diagnosis, and police collision reports.",
+    "cited_section": "Section III.3"
+  },
+  {
+    "query": "My flight was delayed for 7 hours because of a massive thunderstorm. Am I eligible for flight delay compensation with my credit card travel insurance?",
+    "standard_answer": "Yes, if the departure of the scheduled public conveyance is delayed at the direction of the carrier for at least 6 consecutive hours due to inclement weather, you are eligible.",
+    "cited_section": "Section D.2.1"
+  },
+  {
+    "query": "My flight was delayed for 15 hours due to an airline strike. How much will I get from my credit card travel insurance?",
+    "standard_answer": "You will receive $1,000 HKD for the first 6 hours of delay, and $500 HKD for each subsequent 6 hours. For a 15-hour delay, this would be $1,000 HKD (first 6 hours) + $500 HKD (next 6 hours) = $1,500 HKD.",
+    "cited_section": "Section D.2.2"
+  },
+  {
+    "query": "My flight was cancelled due to a mechanical issue, but the airline put me on another flight just 3 hours later. Can I claim for the delay?",
+    "standard_answer": "No, delays due to carrier cancellation where alternative transportation is offered within 4 hours are excluded.",
+    "cited_section": "Section D.2.4"
+  },
+  {
+    "query": "I missed my flight because I was stuck in traffic and arrived late for check-in. The flight was then delayed for 8 hours. Can I still claim the delay benefit?",
+    "standard_answer": "No, delays due to the Insured Person's failure to check in on time are excluded.",
+    "cited_section": "Section D.2.4"
+  },
+  {
+    "query": "We just discovered that the pipes behind our wall have been corroding for years, causing significant water damage. Is this covered by our homeowners policy?",
+    "standard_answer": "No, loss or damage caused by corrosion or latent defects is not covered.",
+    "cited_section": "Section B.4 a)"
+  },
+  {
+    "query": "My roof has been leaking for ages, and now there's mold. Is that covered?",
+    "standard_answer": "No, loss or damage caused by gradual deterioration, mold, or slow leakage/seepage of water over a period exceeding 14 days is not covered.",
+    "cited_section": "Homeowners Policy Exclusions - Section B.4 a), b)"
+  },
+  {
+    "query": "My old pipe just burst suddenly and flooded the bathroom. Am I covered for the water damage?",
+    "standard_answer": "Yes, accidental burst of pipes is covered.",
+    "cited_section": "Homeowners Policy Exclusions - Section B.4 c)"
+  },
+  {
+    "query": "I noticed a small leak under my sink a month ago but didn't fix it, and now the cabinet is ruined. Will my policy cover this?",
+    "standard_answer": "No, damage arising from maintenance neglect or slow leakage or seepage of water over a period exceeding 14 days is not covered.",
+    "cited_section": "Homeowners Policy Exclusions - Section B.4 b)"
+  },
+  {
+    "query": "I was getting out of my car and twisted my ankle. Had to go to the hospital. Can I claim for the medical bills?",
+    "standard_answer": "Yes, the Company will pay reasonable medical expenses incurred in connection with accidental bodily injury sustained by the Insured or any authorized driver while getting into, riding in, or getting out of the Car.",
+    "cited_section": "Motor Insurance Policy - Section III.1"
+  },
+  {
+    "query": "My medical bills from the car accident came up to $8,000 HKD. How much can I get back, and what do you need?",
+    "standard_answer": "The maximum limit of indemnity for any single event under this Section is $6,000 HKD. Medical claims must be accompanied by original official medical receipts, physician's diagnosis, and police collision reports.",
+    "cited_section": "Motor Insurance Policy - Section III.2, III.3"
+  },
+  {
+    "query": "My flight to London was delayed by 7 hours because of a huge snowstorm. Can I claim for that? I paid with my credit card.",
+    "standard_answer": "Yes, if the departure is delayed at the direction of the carrier for at least 6 consecutive hours due to inclement weather, and the travel tickets were purchased using the eligible Credit Card prior to departure.",
+    "cited_section": "Credit Card Comprehensive Travel Insurance - Section D.2.1, D.2.3"
+  },
+  {
+    "query": "My flight was delayed for 15 hours due to a mechanical issue. How much compensation can I expect?",
+    "standard_answer": "The Company will pay $1,000 HKD for the first 6 hours of delay, and $500 HKD for each subsequent 6 hours, up to a maximum limit of $5,000 HKD. For a 15-hour delay, this would be $1,000 HKD (first 6 hours) + $500 HKD (next 6 hours) = $1,500 HKD.",
+    "cited_section": "Credit Card Comprehensive Travel Insurance - Section D.2.2"
+  },
+  {
+    "query": "My flight was cancelled due to a strike, but the airline put me on another flight just 3 hours later. Can I still claim for the delay?",
+    "standard_answer": "No, delays due to carrier cancellation where alternative transportation is offered within 4 hours are excluded.",
+    "cited_section": "Credit Card Comprehensive Travel Insurance - Section D.2.4"
+  },
+  {
+    "query": "I missed my flight because I got stuck in traffic and arrived late for check-in. Can I claim for the delay benefit?",
+    "standard_answer": "No, delays due to the Insured Person's failure to check in on time are excluded.",
+    "cited_section": "Credit Card Comprehensive Travel Insurance - Section D.2.4"
+  },
+  {
+    "query": "We just discovered a hidden structural flaw in our foundation that's been there since the house was built, causing cracks. Is this covered?",
+    "standard_answer": "No, loss or damage caused by latent defects is not covered.",
+    "cited_section": "Homeowners Policy Exclusions - Section B.4 a)"
+  },
+  {
+    "query": "My roof has been leaking for ages, and now there's mold. Is that covered?",
+    "standard_answer": "No, loss or damage caused by gradual deterioration, mold, or slow leakage/seepage of water over a period exceeding 14 days is not covered.",
+    "cited_section": "Homeowners Policy Exclusions - Section B.4 a), b)"
+  },
+  {
+    "query": "My old pipe just burst suddenly and flooded the bathroom. Am I covered for the water damage?",
+    "standard_answer": "Yes, accidental burst of pipes is covered.",
+    "cited_section": "Homeowners Policy Exclusions - Section B.4 c)"
+  },
+  {
+    "query": "I noticed a small leak under my sink a month ago but didn't fix it, and now the cabinet is ruined. Will my policy cover this?",
+    "standard_answer": "No, damage arising from maintenance neglect or slow leakage or seepage of water over a period exceeding 14 days is not covered.",
+    "cited_section": "Homeowners Policy Exclusions - Section B.4 b)"
+  },
+  {
+    "query": "I was getting out of my car and twisted my ankle. Had to go to the hospital. Can I claim for the medical bills?",
+    "standard_answer": "Yes, the Company will pay reasonable medical expenses incurred in connection with accidental bodily injury sustained by the Insured or any authorized driver while getting into, riding in, or getting out of the Car.",
+    "cited_section": "Motor Insurance Policy - Section III.1"
+  },
+  {
+    "query": "My medical bills from the car accident came up to $8,000 HKD. How much can I get back, and what do you need?",
+    "standard_answer": "The maximum limit of indemnity for any single event under this Section is $6,000 HKD. Medical claims must be accompanied by original official medical receipts, physician's diagnosis, and police collision reports.",
+    "cited_section": "Motor Insurance Policy - Section III.2, III.3"
+  },
+  {
+    "query": "My flight to London was delayed by 7 hours because of a huge snowstorm. Can I claim for that? I paid with my credit card.",
+    "standard_answer": "Yes, if the departure is delayed at the direction of the carrier for at least 6 consecutive hours due to inclement weather, and the travel tickets were purchased using the eligible Credit Card prior to departure.",
+    "cited_section": "Credit Card Comprehensive Travel Insurance - Section D.2.1, D.2.3"
+  },
+  {
+    "query": "My flight was delayed for 15 hours due to a mechanical issue. How much compensation can I expect?",
+    "standard_answer": "The Company will pay $1,000 HKD for the first 6 hours of delay, and $500 HKD for each subsequent 6 hours, up to a maximum limit of $5,000 HKD. For a 15-hour delay, this would be $1,000 HKD (first 6 hours) + $500 HKD (next 6 hours) = $1,500 HKD.",
+    "cited_section": "Credit Card Comprehensive Travel Insurance - Section D.2.2"
+  },
+  {
+    "query": "My flight was cancelled due to a strike, but the airline put me on another flight just 3 hours later. Can I still claim for the delay?",
+    "standard_answer": "No, delays due to carrier cancellation where alternative transportation is offered within 4 hours are excluded.",
+    "cited_section": "Credit Card Comprehensive Travel Insurance - Section D.2.4"
+  },
+  {
+    "query": "I missed my flight because I got stuck in traffic and arrived late for check-in. Can I claim for the delay benefit?",
+    "standard_answer": "No, delays due to the Insured Person's failure to check in on time are excluded.",
+    "cited_section": "Credit Card Comprehensive Travel Insurance - Section D.2.4"
+  },
+  {
+    "query": "We just discovered a hidden structural flaw in our foundation that's been there since the house was built, causing cracks. Is this covered?",
+    "standard_answer": "No, loss or damage caused by latent defects is not covered.",
+    "cited_section": "Homeowners Policy Exclusions - Section B.4 a)"
+  },
+  {
+    "query": "My roof has been leaking for ages, and now there's mold. Is that covered?",
+    "standard_answer": "No, loss or damage caused by gradual deterioration, mold, or slow leakage/seepage of water over a period exceeding 14 days is not covered.",
+    "cited_section": "Homeowners Policy Exclusions - Section B.4 a), b)"
+  },
+  {
+    "query": "My old pipe just burst suddenly and flooded the bathroom. Am I covered for the water damage?",
+    "standard_answer": "Yes, accidental burst of pipes is covered.",
+    "cited_section": "Homeowners Policy Exclusions - Section B.4 c)"
+  },
+  {
+    "query": "I noticed a small leak under my sink a month ago but didn't fix it, and now the cabinet is ruined. Will my policy cover this?",
+    "standard_answer": "No, damage arising from maintenance neglect or slow leakage or seepage of water over a period exceeding 14 days is not covered.",
+    "cited_section": "Homeowners Policy Exclusions - Section B.4 b)"
+  },
+  {
+    "query": "I was getting out of my car and twisted my ankle. Had to go to the hospital. Can I claim for the medical bills?",
+    "standard_answer": "Yes, the Company will pay reasonable medical expenses incurred in connection with accidental bodily injury sustained by the Insured or any authorized driver while getting into, riding in, or getting out of the Car.",
+    "cited_section": "Motor Insurance Policy - Section III.1"
+  },
+  {
+    "query": "My medical bills from the car accident came up to $8,000 HKD. How much can I get back, and what do you need?",
+    "standard_answer": "The maximum limit of indemnity for any single event under this Section is $6,000 HKD. Medical claims must be accompanied by original official medical receipts, physician's diagnosis, and police collision reports.",
+    "cited_section": "Motor Insurance Policy - Section III.2, III.3"
+  },
+  {
+    "query": "My flight to London was delayed by 7 hours because of a huge snowstorm. Can I claim for that? I paid with my credit card.",
+    "standard_answer": "Yes, if the departure is delayed at the direction of the carrier for at least 6 consecutive hours due to inclement weather, and the travel tickets were purchased using the eligible Credit Card prior to departure.",
+    "cited_section": "Credit Card Comprehensive Travel Insurance - Section D.2.1, D.2.3"
+  },
+  {
+    "query": "My flight was delayed for 15 hours due to a mechanical issue. How much compensation can I expect?",
+    "standard_answer": "The Company will pay $1,000 HKD for the first 6 hours of delay, and $500 HKD for each subsequent 6 hours, up to a maximum limit of $5,000 HKD. For a 15-hour delay, this would be $1,000 HKD (first 6 hours) + $500 HKD (next 6 hours) = $1,500 HKD.",
+    "cited_section": "Credit Card Comprehensive Travel Insurance - Section D.2.2"
+  },
+  {
+    "query": "My flight was cancelled due to a strike, but the airline put me on another flight just 3 hours later. Can I still claim for the delay?",
+    "standard_answer": "No, delays due to carrier cancellation where alternative transportation is offered within 4 hours are excluded.",
+    "cited_section": "Credit Card Comprehensive Travel Insurance - Section D.2.4"
+  },
+  {
+    "query": "I missed my flight because I got stuck in traffic and arrived late for check-in. Can I claim for the delay benefit?",
+    "standard_answer": "No, delays due to the Insured Person's failure to check in on time are excluded.",
+    "cited_section": "Credit Card Comprehensive Travel Insurance - Section D.2.4"
+  },
+  {
+    "query": "We just discovered a hidden structural flaw in our foundation that's been there since the house was built, causing cracks. Is this covered?",
+    "standard_answer": "No, loss or damage caused by latent defects is not covered.",
+    "cited_section": "Homeowners Policy Exclusions - Section B.4 a)"
+  }
+]

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="circleView">
+      <circle cx="50" cy="50" r="50" />
+    </clipPath>
+  </defs>
+  <g clip-path="url(#circleView)">
+    <!-- Background -->
+    <rect width="100" height="100" fill="#f1f5f9" />
+    <!-- Hoodie Body -->
+    <path d="M 15 100 C 15 60 85 60 85 100" fill="#374151" />
+    <path d="M 35 100 C 40 75 60 75 65 100" fill="#1f2937" />
+    <path d="M 50 75 L 50 100" stroke="#111827" stroke-width="2" />
+    <!-- Neck -->
+    <rect x="42" y="45" width="16" height="20" fill="#fcd34d" />
+    <!-- Face -->
+    <circle cx="50" cy="35" r="16" fill="#fcd34d" />
+    <!-- Hair (Slicked back dark hair) -->
+    <path d="M 32 35 C 32 15 68 15 68 35 C 68 20 32 20 32 35 Z" fill="#111827" />
+    <path d="M 34 25 C 50 10 66 25 66 25 C 50 15 34 25 34 25 Z" fill="#1f2937" />
+  </g>
+</svg>

@@ -1,0 +1,42 @@
+[
+  {
+    "clean_text": "Patient: Alice Smith. Collision Date: 2026-06-20. Garage: Tokyo Auto Body. Repair: Rear Bumper Replacement. Parts: $4,500. Labor: $1,500. Total: $6,000 HKD.",
+    "noisy_text": "Patlent: Al!ce Sm!th. Co!!ision Date: 2O26-O6-2O. Garage: Tokyo Auto Body. Repalr: Rear Bumper Rep!acement. Parts: $4,S00. Labor: $l,S00. Tota!: $6,OOO HKD.",
+    "error_type": "OCR character replacement (e.g., 'i' to '!', '1' to 'l', '0' to 'O', '5' to 'S')"
+  },
+  {
+    "clean_text": "Patient: Alice Smith. Collision Date: 2026-06-20. Garage: Tokyo Auto Body. Repair: Rear Bumper Replacement. Parts: $4,500. Labor: $1,500. Total: $6,000 HKD.",
+    "noisy_text": "Patient Alice Smith. Collision Date 2026-06-20. Garage Tokyo Auto Body. Repair Rear Bumper Replacement. Parts $4,500. Labor $1,500. Total $6,000 HKD.",
+    "error_type": "Formatting chaos (missing key-value separators, inconsistent spacing)"
+  },
+  {
+    "clean_text": "Patient: Alice Smith. Collision Date: 2026-06-20. Garage: Tokyo Auto Body. Repair: Rear Bumper Replacement. Parts: $4,500. Labor: $1,500. Total: $6,000 HKD.",
+    "noisy_text": "Patient: Alice Smith. Collision Date: 2026-06-20. Garage: Tokyo Auto Body. Repair: Rear Bumper Replacement. Parts: $4,500. Labor: $1,500.",
+    "error_type": "Crucial information omission (total amount)"
+  },
+  {
+    "clean_text": "Patient: Alice Smith. Collision Date: 2026-06-20. Garage: Tokyo Auto Body. Repair: Rear Bumper Replacement. Parts: $4,500. Labor: $1,500. Total: $6,000 HKD.",
+    "noisy_text": "Patient: Alice Smith. Collision Date: 2026-06-20. Garage: Tokyo Auto Body. Repair: Rear Bumper Replacement. Parts: $4,500. Labor: $1,500. Total: $7,000 HKD.",
+    "error_type": "Conflicting total amount (does not sum up correctly from parts and labor)"
+  },
+  {
+    "clean_text": "Insured: Bob Martin. Flight No: SQ-809. Date: 2026-06-25. Original Departure: 14:00. Actual Departure: 23:30. Delay: 9.5 hours. Carrier: Singapore Airlines.",
+    "noisy_text": "lnsured: 8ob Martln. Fligbt No: 5Q-8O9. Date: 2O26-O6-25. Origlnal Departure: l4:OO. Actual Departure: 23:3O. Delay: 9.5 bours. Carrler: Slngapore Alrlines.",
+    "error_type": "OCR character replacement (1->l, 0->O, B->8, S->5, i->l, h->b)"
+  },
+  {
+    "clean_text": "Insured: Bob Martin. Flight No: SQ-809. Date: 2026-06-25. Original Departure: 14:00. Actual Departure: 23:30. Delay: 9.5 hours. Carrier: Singapore Airlines.",
+    "noisy_text": "Insured: Bob Martin.Flight No: SQ-809. Date: 2026-06-25. Original Departure: 14:00. Actual Departure: 23:30. Delay: 9.5 hours.Carrier: Singapore Airlines.",
+    "error_type": "Formatting chaos (inconsistent spacing, missing spaces after periods)"
+  },
+  {
+    "clean_text": "Insured: Bob Martin. Flight No: SQ-809. Date: 2026-06-25. Original Departure: 14:00. Actual Departure: 23:30. Delay: 9.5 hours. Carrier: Singapore Airlines.",
+    "noisy_text": "Flight No: SQ-809. Date: 2026-06-25. Original Departure: 14:00. Actual Departure: 23:30. Delay: 9.5 hours. Carrier: Singapore Airlines.",
+    "error_type": "Crucial info omission (Insured name removed)"
+  },
+  {
+    "clean_text": "Insured: Bob Martin. Flight No: SQ-809. Date: 2026-06-25. Original Departure: 14:00. Actual Departure: 23:30. Delay: 9.5 hours. Carrier: Singapore Airlines.",
+    "noisy_text": "Insured: Bob Martin. Flight No: SQ-809. Date: 2026-06-25. Original Departure: 14:00. Actual Departure: 23:30. Delay: 2.0 hours. Carrier: Singapore Airlines.",
+    "error_type": "Conflicting amounts (Delay time inconsistent with departure times)"
+  }
+]

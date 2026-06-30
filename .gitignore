@@ -1,0 +1,76 @@
+# System and OS Files
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.swp
+
+# Python Virtual Environments & Packages
+.venv/
+venv/
+ENV/
+env/
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+frontend/dist/
+frontend/.vite/
+
+# Database & Cache
+*.db
+*.sqlite3
+backend/data/lancedb/
+backend/data/neo4j/
+backend/logs/*
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Python Test & Coverage caches
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.cache/
+pip-log.txt
+backend/scratch/
+
+# Environment variables & secrets
+.env
+*.env
+backend/.env
+frontend/.env
+
+# Temporary IDE / Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Demo or non-core development files
+kaggle hackathon/
+frontend/*_generated.tsx
+frontend/extract_login.py
+frontend/fetch_code*.py
+frontend/make_pdf.py
+backend/generate_mock_pdfs.py
+backend/search_pdf.py
+frontend/ts-e2e/
+frontend/qa-tests/
+frontend/tests/e2e/
+frontend/tests/integration/
+frontend/test-results/
+hackathon-project.md
+revised_notebook.md
+video_script.md
+README.md.old

@@ -1,0 +1,42 @@
+{
+  "auth": {
+    "title": "Cross-Border Claims Gateway",
+    "subtitle": "AI-Native Fraud Interception & Settlement",
+    "roleAdmin": "Admin",
+    "roleAdjuster": "Loss Adjuster",
+    "roleCustomer": "Subrogation Desk",
+    "emailPlaceholder": "Email Address",
+    "passwordPlaceholder": "Password",
+    "loginButton": "Sign In",
+    "loggingIn": "Signing In...",
+    "feature1Title": "Cross-border Subrogation",
+    "feature1Desc": "Seamlessly resolve multi-jurisdictional funds.",
+    "feature2Title": "Black Swan Interception",
+    "feature2Desc": "Identify and halt fraudulent activities dynamically."
+  },
+  "claims": {
+    "listTitle": "Claims Overview",
+    "detailTitle": "Claim Detail",
+    "propertyCasualty": "Property & Casualty",
+    "lifeInsurance": "Life Insurance",
+    "coverage": "Coverage",
+    "maxLimit": "Max Limit",
+    "excess": "Excess",
+    "exclusions": "Exclusions",
+    "aiAnalysis": "AI Assessment Reasoning",
+    "fraudLevel": "Fraud Risk Level",
+    "structuralData": "Structured Claim Data"
+  },
+  "audit": {
+    "title": "HITL Audit Queue",
+    "approveAdjust": "Approve & Adjust",
+    "overrideTitle": "Manual Adjustment Required",
+    "overrideDesc": "The AI paused this claim due to hitting the Max Limit or Fraud rules. Please input the final settlement amount.",
+    "inputPlaceholder": "Enter amount...",
+    "confirmButton": "Confirm Payload",
+    "cancelButton": "Cancel"
+  },
+  "common": {
+    "language": "EN"
+  }
+}
