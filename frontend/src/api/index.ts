@@ -27,7 +27,7 @@ apiClient.interceptors.response.use(
         message.error('Session expired');
         localStorage.removeItem('access_token');
         localStorage.removeItem('refresh_token');
-        setTimeout(() => { window.location.href = '/login'; }, 2000);
+        setTimeout(() => { window.location.href = window.location.pathname + '#/login'; }, 2000);
       } else if (status === 403) {
         message.error('Access Denied: You do not have permission to perform this action.', 3);
         // Do not redirect for 403, just block action.
