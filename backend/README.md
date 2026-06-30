@@ -8,7 +8,7 @@
 
 ---
 
-# 🇬🇧 English Version
+# English Version
 
 ## 🛠️ Tech Stack
 - **Framework**: FastAPI + SQLAlchemy
@@ -129,7 +129,7 @@ python tests/qa/runner.py
 
 ---
 
-# 🇨🇳 中文版
+# 中文版
 
 ## 🛠️ 技術棧
 - **框架**: FastAPI + SQLAlchemy
