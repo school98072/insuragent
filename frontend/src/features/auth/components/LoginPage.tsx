@@ -24,7 +24,7 @@ export default function LoginPage() {
     setLoading(true)
     setTimeout(async () => {
       setLoading(false)
-      const resultAction = await dispatch(login({ email, password }))
+      const resultAction = await dispatch(login({ email: email.trim(), password: password.trim() }))
       if (login.fulfilled.match(resultAction)) {
         navigate('/dashboard')
       } else {
@@ -58,7 +58,7 @@ export default function LoginPage() {
         // Brief pause to show the filled form before auto-submitting
         setTimeout(async () => {
           setLoading(false)
-          const resultAction = await dispatch(login({ email: targetUser.email, password: targetUser.password }))
+          const resultAction = await dispatch(login({ email: targetUser.email.trim(), password: targetUser.password.trim() }))
           if (login.fulfilled.match(resultAction)) {
             navigate('/dashboard')
           } else {

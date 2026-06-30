@@ -11,6 +11,17 @@ def create_start_app_handler(app: FastAPI):
         from app.core.config import settings
         Path(settings.UPLOAD_DIR).mkdir(parents=True, exist_ok=True)
         Path(settings.LOG_DIR).mkdir(parents=True, exist_ok=True)
+        
+        # Auto-seed database tables and default users on boot
+        try:
+            import sys
+            import os
+            sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            from scripts.seed_demo_users import seed_users
+            logger.info("Running database auto-seeding...")
+            seed_users()
+        except Exception as e:
+            logger.error(f"Database auto-seeding failed: {e}", exc_info=True)
     return startup
 
 
