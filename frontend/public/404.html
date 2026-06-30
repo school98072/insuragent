@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    var path = window.location.pathname;
+    var segments = path.split('/');
+    var base = '/' + segments[1];
+    var route = segments.slice(2).join('/');
+    window.location.replace(window.location.origin + base + '/#/' + route + window.location.search + window.location.hash);
+  </script>
+</head>
+<body>
+  Redirecting to Insuragent...
+</body>
+</html>
