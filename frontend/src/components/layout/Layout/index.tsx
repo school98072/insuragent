@@ -53,6 +53,7 @@ export default function AppLayout() {
   const [accentColor, setAccentColor] = useState('blue')
   const [lang, setLang] = useState('en')
   const [notifyEnabled, setNotifyEnabled] = useState(true)
+  const [geminiKey, setGeminiKey] = useState(localStorage.getItem('GEMINI_API_KEY') || '')
 
   const navigate = useNavigate()
   const location = useLocation()
@@ -510,6 +511,21 @@ export default function AppLayout() {
                 }}
               />
             </div>
+          </div>
+
+          <Divider className="my-0" />
+
+          <div>
+            <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Gemini API Key</h4>
+            <Input.Password
+              placeholder="AIzaSy..."
+              value={geminiKey}
+              onChange={(e) => {
+                setGeminiKey(e.target.value)
+                localStorage.setItem('GEMINI_API_KEY', e.target.value.trim())
+              }}
+            />
+            <span className="text-[10px] text-gray-400 mt-1 block">Saved automatically in browser cache. / 金鑰自動儲存。</span>
           </div>
 
           <Divider className="my-0" />
