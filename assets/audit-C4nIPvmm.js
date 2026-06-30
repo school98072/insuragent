@@ -1,0 +1,1 @@
+import{aE as e}from"./index-DQ_E_kg2.js";const a={getInbox:t=>e.get("/audit/queue",{params:t}),assign:t=>e.post(`/audit/${t}/assign`),decide:(t,i)=>e.post(`/audit/${t}/decide`,i),getSystemLogs:()=>e.get("/audit/logs")};export{a as t};
