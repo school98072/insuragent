@@ -1,0 +1,22 @@
+name: Keep Alive Backend & Database
+
+on:
+  schedule:
+    # Run at 00:00 UTC on every 5th day of the month
+    - cron: '0 0 */5 * *'
+  workflow_dispatch: # Allows manual triggering from the GitHub Actions tab
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Health Endpoint
+        run: |
+          echo "Sending GET request to Render backend health endpoint to keep service and database active..."
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" https://insuragent-backend.onrender.com/health)
+          echo "Response code: $RESPONSE"
+          if [ "$RESPONSE" -ne 200 ]; then
+            echo "Warning: Health endpoint returned non-200 status code: $RESPONSE"
+          else
+            echo "Successfully pinged health check. Service and Supabase database are kept active!"
+          fi
