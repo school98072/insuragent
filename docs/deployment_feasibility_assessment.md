@@ -10,7 +10,7 @@ This document evaluates the feasibility of deploying the InsureAgent system, add
 
 ---
 
-# 🇬🇧 English Version
+# English Version
 
 ## 1. Frontend Deployment via GitHub Actions
 *   **Feasibility**: **High (Excellent fit)**.
@@ -45,7 +45,7 @@ This document evaluates the feasibility of deploying the InsureAgent system, add
 
 ---
 
-# 🇨🇳 中文版
+# 中文版
 
 ## 1. 前端部署（GitHub Actions）
 *   **可行性**：**極高 (最佳搭配)**。
