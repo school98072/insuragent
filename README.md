@@ -1,4 +1,4 @@
-# InsureAgent: Multi-Agent Claim Adjudication & Audit System
+# Insuragent: Multi-Agent Claim Adjudication & Audit System
 
 An autonomous, multi-agent cooperative system designed for rapid, accurate, and transparent insurance claim verification, fraud detection, policy analysis, and end-to-end adjudication.
 
@@ -13,7 +13,7 @@ An autonomous, multi-agent cooperative system designed for rapid, accurate, and 
 # English Version
 
 ## 🌟 Project Overview
-InsureAgent leverages a collaborative multi-agent architecture powered by **Gemini 2.5 (Pro & Flash)** models to automate the complex process of insurance claim adjudication. By dissecting unstructured files (images, medical bills, auto invoices, PDFs) and cross-referencing them against policy rules and structured databases, InsureAgent replaces manual labor with intelligent, transparent, and auditable reasoning.
+InsuraAgent leverages a collaborative multi-agent architecture powered by **Gemini 2.5 (Pro & Flash) or Claude** models to automate the complex process of insurance claim adjudication. By dissecting unstructured files (images, medical bills, auto invoices, PDFs) and cross-referencing them against policy rules and structured databases, Insuragent replaces manual labor with intelligent, transparent, and auditable reasoning.
 
 ### Key Metrics Reached:
 *   **Adjudication Speed**: Processing time reduced from days to **under 5 minutes** per claim.
@@ -23,7 +23,7 @@ InsureAgent leverages a collaborative multi-agent architecture powered by **Gemi
 ---
 
 ## 🏗️ Multi-Agent Architecture
-Adjudicating an insurance claim requires diverse perspectives: financial math, policy wording interpretation, image inspection, and ultimate judgment. InsureAgent implements **four specialized agents** working sequentially:
+Adjudicating an insurance claim requires diverse perspectives: financial math, policy wording interpretation, image inspection, and ultimate judgment. Insuragent implements **four specialized agents** working sequentially:
 
 ```
 [Claim Intake] ➔ [Stage 0: RAG Agent] ➔ [Stage 1: Damage Agent] ➔ [Stage 2: Policy Agent] ➔ [Stage 3: Decision Agent] ➔ [Audit Gate]
@@ -139,7 +139,7 @@ Use the following pre-seeded user roles to log in and test different system inte
 # 中文版
 
 ## 🌟 專案概述
-InsureAgent 是一個基於 **Gemini 2.5 (Pro & Flash)** 大模型與協同式多智能體 (Multi-Agent) 架構的保險智能理賠審核平台。它能夠自動剖析非結構化文件（相片、醫療收據、車險維修單、PDF 契約），並與保單條款和結構化數據庫進行精準對照，用高透明度、可追溯的 AI 推理流程取代繁琐的人工理賠初審。
+Insuragent 是一個基於 **Gemini 2.5 (Pro & Flash)** 大模型與協同式多智能體 (Multi-Agent) 架構的保險智能理賠審核平台。它能夠自動剖析非結構化文件（相片、醫療收據、車險維修單、PDF 契約），並與保單條款和結構化數據庫進行精準對照，用高透明度、可追溯的 AI 推理流程取代繁琐的人工理賠初審。
 
 ### 專案關鍵指標：
 *   **審核速度**：理賠案件的處理時間由數天大幅縮短至 **5 分鐘以內**。
