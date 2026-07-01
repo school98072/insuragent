@@ -5,8 +5,8 @@ An autonomous, multi-agent cooperative system designed for rapid, accurate, and 
 ---
 
 ## 🌐 Language Options / 語言選擇
-* [English Version (英文版)](#-english-version)
-* [中文版 (Chinese Version)](#-中文版)
+* [English Version (英文版)](#english-version)
+* [中文版 (Chinese Version)](#中文版)
 
 ---
 
