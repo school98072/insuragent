@@ -1,1 +1,0 @@
-import{aF as e}from"./index-DFRp76m7.js";const a={getInbox:t=>e.get("/audit/queue",{params:t}),assign:t=>e.post(`/audit/${t}/assign`),decide:(t,i)=>e.post(`/audit/${t}/decide`,i),getSystemLogs:()=>e.get("/audit/logs")};export{a as t};
