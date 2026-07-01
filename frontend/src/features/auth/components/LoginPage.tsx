@@ -12,25 +12,52 @@ export default function LoginPage() {
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const [selectedRole, setSelectedRole] = useState<string | null>(null)
+  const [showSlowServerWarning, setShowSlowServerWarning] = useState(false)
   
   const navigate = useNavigate()
   const dispatch = useAppDispatch()
+
+  const executeLogin = async (loginEmail: string, loginPassword: string) => {
+    setLoading(true)
+    setShowSlowServerWarning(false)
+
+    // Setup a timer to show keep-alive cold start alert if it takes > 1 second
+    const warningTimer = setTimeout(() => {
+      setShowSlowServerWarning(true)
+    }, 1000)
+
+    try {
+      const resultAction = await dispatch(login({ 
+        email: loginEmail.trim(), 
+        password: loginPassword.trim() 
+      }))
+      
+      clearTimeout(warningTimer)
+      
+      if (login.fulfilled.match(resultAction)) {
+        navigate('/dashboard')
+      } else {
+        setShowSlowServerWarning(false)
+        setLoading(false)
+        message.error(resultAction.payload as string || 'Login failed')
+      }
+    } catch (error) {
+      clearTimeout(warningTimer)
+      setShowSlowServerWarning(false)
+      setLoading(false)
+      message.error('An unexpected error occurred during login')
+    }
+  }
 
   const handleManualLogin = async () => {
     if (!email || !password) {
       message.error('Please enter email and password')
       return
     }
-    setLoading(true)
-    setTimeout(async () => {
-      setLoading(false)
-      const resultAction = await dispatch(login({ email: email.trim(), password: password.trim() }))
-      if (login.fulfilled.match(resultAction)) {
-        navigate('/dashboard')
-      } else {
-        message.error(resultAction.payload as string || 'Login failed')
-      }
-    }, 800)
+    // Slight artificial delay for UX typing visual feel
+    setTimeout(() => {
+      executeLogin(email, password)
+    }, 300)
   }
 
   const handleDemoSelect = (roleKey: string) => {
@@ -46,7 +73,7 @@ export default function LoginPage() {
     let currentEmail = ''
     let i = 0
 
-    // 0.6s typing effect for email
+    // typing effect for email
     const interval = setInterval(() => {
       currentEmail += fullEmail[i]
       setEmail(currentEmail)
@@ -55,15 +82,8 @@ export default function LoginPage() {
         clearInterval(interval)
         setPassword('••••••••••••')
         
-        // Brief pause to show the filled form before auto-submitting
-        setTimeout(async () => {
-          setLoading(false)
-          const resultAction = await dispatch(login({ email: targetUser.email.trim(), password: targetUser.password.trim() }))
-          if (login.fulfilled.match(resultAction)) {
-            navigate('/dashboard')
-          } else {
-            message.error(resultAction.payload as string || 'Login failed')
-          }
+        setTimeout(() => {
+          executeLogin(targetUser.email, targetUser.password)
         }, 300)
       }
     }, 600 / fullEmail.length)
@@ -80,6 +100,39 @@ export default function LoginPage() {
       position: 'relative',
       overflow: 'hidden'
     }}>
+      {/* Slow Server Wakeup Glassmorphism Overlay */}
+      {showSlowServerWarning && (
+        <div style={{
+          position: 'fixed',
+          inset: 0,
+          background: 'rgba(255, 255, 255, 0.85)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 9999,
+          padding: 24,
+          textAlign: 'center'
+        }}>
+          <Spin size="large" />
+          <Typography.Title level={4} style={{ marginTop: 24, marginBottom: 8, color: '#1e293b', fontWeight: 700 }}>
+            Waking Up Cloud Server... / 正在喚醒雲端伺服器
+          </Typography.Title>
+          <Typography.Text style={{ maxWidth: 420, color: '#64748b', fontSize: '13px', lineHeight: 1.6 }}>
+            The Render backend containers are hosted on a free-tier plan and automatically sleep after 15 minutes of inactivity. 
+            <strong style={{ color: '#0f172a', display: 'block', margin: '4px 0' }}>Waking up takes approximately 30 to 50 seconds.</strong>
+            Please do not close or reload this window.
+          </Typography.Text>
+          <div style={{ width: '100%', maxWidth: 300, borderTop: '1px solid rgba(0,0,0,0.08)', margin: '16px 0' }} />
+          <Typography.Text style={{ maxWidth: 420, color: '#64748b', fontSize: '13px', lineHeight: 1.6 }}>
+            系統後端託管於 Render 免費雲端容器，無人造訪時會進入休眠。
+            <strong style={{ color: '#0f172a', display: 'block', margin: '4px 0' }}>首次啟動與連線約需 30-50 秒。</strong>
+            我們正在進行安全資料驗證，請稍候，切勿關閉或整理網頁。
+          </Typography.Text>
+        </div>
+      )}
       {/* Background Decorative Elements */}
       <div style={{
         position: 'absolute', top: '-10%', left: '-10%', width: '50vw', height: '50vw',
