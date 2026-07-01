@@ -25,6 +25,9 @@ class Settings(BaseSettings):
     # ==========================================================================
     LLM_PROVIDER: str = "gemini"  # 总开关默认调整为吉米妮
     DEFAULT_LLM_MODEL: str = "gemini-2.5-pro"
+    
+    # Toggle to dynamically format retrieved RAG chunks using LLMs (disabled by default for low latency/avoiding rate limits)
+    ENABLE_LLM_RAG_FORMATTING: bool = False
 
     # 精准指派：只有条款节点保留贵族 Claude，其余统统交给 Gemini 军团
     CLAUSE_AGENT_MODEL: str = "claude-sonnet-4.6"  # 质量捍卫线

@@ -129,3 +129,15 @@ def _clear_session_store():
     _SESSION_STORE.clear()
     yield
     _SESSION_STORE.clear()
+
+
+@pytest.fixture(autouse=True)
+def mock_global_llm():
+    """Globally mock get_llm to prevent unit tests from making real network LLM calls."""
+    mock_llm = MagicMock()
+    mock_response = MagicMock()
+    mock_response.content = "consultation"
+    mock_llm.ainvoke = AsyncMock(return_value=mock_response)
+    
+    with patch("app.services.ai.llm_factory.get_llm", return_value=(mock_llm, "gemini")):
+        yield

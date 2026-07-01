@@ -9,6 +9,9 @@ Covers:
 """
 import pytest
 from unittest.mock import AsyncMock, MagicMock, patch
+from app.core.config import settings
+settings.ENABLE_LLM_RAG_FORMATTING = True
+
 from app.services.ai.rag import (
     RAGService,
     ChunkCategorySchema,

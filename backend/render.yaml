@@ -4,6 +4,11 @@ services:
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: python backend/scripts/seed_demo_users.py && python backend/scripts/seed_realistic_claims.py && PYTHONPATH=backend uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
+    # Persistent disk: survives redeploys — stores uploaded claim documents and SQLite DB
+    disk:
+      name: insuragent-data
+      mountPath: /data
+      sizeGB: 1
     envVars:
       - key: APP_NAME
         value: InsuranceAISystem
@@ -21,3 +26,6 @@ services:
         value: neo4j
       - key: NEO4J_PASSWORD
         sync: false
+      # Point uploads to the persistent disk mount
+      - key: UPLOAD_DIR
+        value: /data/uploads

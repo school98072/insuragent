@@ -313,6 +313,34 @@ class RAGService:
     async def _format_results(self, raw_docs: List[Dict], dynamic_keys: Optional[Dict[str, str]] = None) -> List[Dict[str, Any]]:
         """Convert raw LanceDB rows to the standard result format with LLM classification and restructuring."""
         import asyncio
+        from app.core.config import settings
+
+        # Heuristic fast-path: completely bypasses dynamic LLM categorization and restructuring
+        # during search request loop to reduce latency from ~10s to ~10ms and prevent 429 rate limiting.
+        if not settings.ENABLE_LLM_RAG_FORMATTING:
+            formatted = []
+            for row in raw_docs:
+                dist = row.get("_distance") or 0.0
+                score = max(0.0, 1.0 - (dist / 2.0))
+                title = row.get("policy_title", "VectorDB")
+                raw_text = row.get("text", "")
+                
+                # Dynamic heuristic categorizer (sync substring lookups)
+                category = _classify_chunk_heuristic(title, raw_text)
+                
+                # Heuristic title extraction (first line of text)
+                first_line = raw_text.split('\n')[0] if raw_text else "Policy Reference"
+                if len(first_line) > 50:
+                    first_line = first_line[:50] + "..."
+                formatted_text = f"{first_line}\n\n{raw_text}"
+                
+                formatted.append({
+                    "score": round(score, 4),
+                    "source": title,
+                    "text": formatted_text,
+                    "category": category,
+                })
+            return formatted
 
         async def process_row(row):
             dist = row.get("_distance") or 0.0
