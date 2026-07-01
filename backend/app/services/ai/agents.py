@@ -419,6 +419,41 @@ class ClaimsAIOrchestrator:
         missing_docs = self._check_required_docs_missing(claim_type, getattr(claim, "documents", []))
         anomalies_list = []
         
+        # Run advanced ML anomaly check (Isolation Forest / Outlier check)
+        try:
+            from app.utils.anomaly_detection import TransactionAuditSkills
+            skills = TransactionAuditSkills()
+            
+            # Extract incident hour and amount
+            incident_hour = 12 # Default to standard business hours
+            inc_date = getattr(claim, "incident_date", None)
+            if isinstance(inc_date, datetime):
+                incident_hour = inc_date.hour
+            elif hasattr(inc_date, "hour"):
+                incident_hour = inc_date.hour
+                
+            is_anomaly = skills.detect_outliers([float(claimed_amount), float(incident_hour)])
+            if is_anomaly:
+                anomalies_list.append({
+                    "title": "ML Outlier Check Alert / 機器學習異常警示",
+                    "description": f"The claim triggers our ML anomaly audit rule (off-hours operation or excessive amount variance). Detected transaction hour: {incident_hour}:00."
+                })
+                # Set decision to human review due to ML risk flags
+                if result.get("decision") in ["approve", "partial_approve"]:
+                    result["decision"] = "human_review"
+                    result["confidence"] = 0.65
+                    result["reasoning"] = (
+                        f"【System ML Anomaly Alert / 系統異常指標攔截】\n"
+                        f"This transaction has been flagged by our ML Isolation Forest rules (outlier in amount/timestamp values).\n"
+                        f"Original AI decision was '{result.get('decision')}' with confidence {result.get('confidence')*100:.0f}%, "
+                        f"but auto-approval is blocked pending a manual audit of the off-hours submission or high variance.\n"
+                        f"\n\n---\n\n"
+                        + result.get("reasoning", "")
+                    )
+        except Exception:
+            # Fallback if anomaly checks fail or parameters are incompatible
+            pass
+        
         # Pull existing red flags from damage assessment to surface them as UI anomalies
         for rf in damage_json.get("red_flags", []):
             anomalies_list.append({
