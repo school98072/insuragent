@@ -364,6 +364,14 @@ class ClaimsAIOrchestrator:
         claimed_amount = getattr(claim, "claimed_amount", 0)
         policy_number = getattr(claim, "policy_number", "")
 
+        # Run security guardrails (sanitisation and PII masking)
+        try:
+            from app.utils.security import SecurityGuardrails
+            guardrails = SecurityGuardrails()
+            description = guardrails.sanitize_input(description)
+        except Exception:
+            pass
+
         # ------------------------------------------------------------------
         # STAGE 0 — RAG: retrieve relevant policy clauses + raw doc corpus
         # ------------------------------------------------------------------
