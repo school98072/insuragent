@@ -159,7 +159,7 @@ export default function LoginPage() {
             <img src={logoSrc} alt="Insuragent Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
           </div>
           <Typography.Title level={3} style={{ color: '#0f172a', margin: 0, fontWeight: 700, letterSpacing: '-0.02em' }}>
-            Insurance Gateway
+            Insuragent
           </Typography.Title>
           <Typography.Text style={{ color: '#475569', fontSize: 14 }}>
             Enterprise AI Claims & Subrogation
