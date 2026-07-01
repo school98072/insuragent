@@ -6,6 +6,8 @@ import enUS from 'antd/locale/en_US'
 import { useTranslation } from 'react-i18next'
 import { store } from './store'
 import AppRouter from './routes'
+import { useBackendWakeup } from '@/hooks/useBackendWakeup'
+import BackendWakeupScreen from '@/components/BackendWakeupScreen'
 
 const { Text, Link } = Typography
 
@@ -154,8 +156,18 @@ function ConfiguredApp() {
     return i18n.language === 'zh' ? zhCN : enUS
   }, [i18n.language])
 
+  const { status, elapsedSec, attempt } = useBackendWakeup()
+  const isWaking = status === 'checking' || status === 'waking'
+
   return (
     <ConfigProvider locale={locale} theme={theme}>
+      {isWaking && (
+        <BackendWakeupScreen
+          status={status}
+          elapsedSec={elapsedSec}
+          attempt={attempt}
+        />
+      )}
       <AppRouter />
       <GeminiKeyModal />
     </ConfigProvider>
